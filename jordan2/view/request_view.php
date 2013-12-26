@@ -17,23 +17,24 @@
 	<title>结果展示</title>
     </head>
 <body >
-<div class="container">
+<div class="row-fluid">
         <div class="row-fluid">
                 <h1>引入结果查询</h1>
         </div>
         <hr>
         <div class="span12">
             <!-- main index-->
-            <div class="span9 offset3 ">
+            <div class="span11 offset1 ">
                 <div class="span8 ">       
                     <form class="navbar-search pull-left"  method="post" enctype="multipart/form-data">
                     
                     <p>
-                        <span>date_hour：</span> 
+                      <span>date_hour：</span> 
                       <input class="input-medium search-query" id="date_hour" type='text'   name='date_hour' value="<?php echo $date_hour ?>"  />
                       <span>domain：</span> 
                       <input class="input-medium search-query" id="domain" type='text'   name='domain' value="<?php echo $domain ?>"  />
-                    
+                      <span>sfrom：</span> 
+                      <input class="input-medium search-query" id="sfrom" type='text'   name='sfrom' value="<?php echo $sfrom ?>"  />
                       <input id="count" type='hidden'  value="0" />
                       <input id="curPage" type='hidden'  value="1" />
                       <input type='button' class="btn  btn-primary" id="submit"  value="search"/> 
@@ -78,10 +79,11 @@
             $(document).ready(function(){
                 $("#submit").click(function(){
                   var domain = $("#domain").val();
+                  var sfrom = $("#sfrom").val();
                   var date_hour = $("#date_hour").val();
                   var checkValue = new RegExp ("^\[0-9]{4}_\[0-9]{2}_\[0-9]{2}_\[0-9]{2}") ;
                   if(checkValue.test(date_hour)){
-                    location.href = "request_view.php?domain="+domain+"&count=0&date_hour="+date_hour;
+                    location.href = "request_view.php?domain="+domain+"&sfrom="+sfrom+"&count=0&date_hour="+date_hour;
                   }else{
                     alert("查询时间格式错误,精确到小时！请输入：2013_09_05_16");
                   }

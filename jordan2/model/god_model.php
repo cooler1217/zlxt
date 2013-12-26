@@ -36,8 +36,12 @@
          mysql_query($create_table_sql);
     }
 
-    function getRequestByDomain($domain,$tableName){
-      $sql = "select  * from request limit 3;";
+    function getRequestByDomain($domain,$sfrom,$tableName){
+      if($sfrom=="0"){
+        $sql = "select  * from request where domain like '%$domain%' limit 50;";
+      }else{
+        $sql = "select  * from request where domain like '%$domain%' and sfrom='$sfrom' limit 50;";
+      }
       $result = mysql_query($sql);
       $requestList = array();
       while($row = mysql_fetch_array($result)) {

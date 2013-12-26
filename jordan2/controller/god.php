@@ -30,7 +30,7 @@
 	        	$redis->set("tableName",$tableName);
 	        }
 	        $request_datetime = date('Y-m-d H:i:s',time());
-	        writeLog('../logs/'.$tableName.'.log', "$jordanGUID\t$domain\t$location\t$request_datetime\n","a");
+	        writeLog('../logs/'.$tableName.'.log', "$jordanGUID\t$domain\t$location\t$request_datetime\n");
 	        insert_request_entry($jordanGUID,$domain,$location,$sfrom,$request_datetime,$tableName);
 			insert_request_entry($jordanGUID,$domain,$location,$sfrom,$request_datetime,"request");
 			// echo "success";
