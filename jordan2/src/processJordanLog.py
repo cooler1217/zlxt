@@ -19,10 +19,11 @@ try:
     transport.open()
 
     tableName = "request_%s" %((datetime.now()-timedelta(days=5)).strftime("%Y_%m_%d_%H"))
-    tableName = "request_2013_10_24_16"
-    client.execute("CREATE TABLE %s (jordanGUID STRING, domain STRING, location_url STRING, request_datetime STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t'" %(tableName))
+    tableName = "request_2013_12_26_15"
+    client.execute("CREATE TABLE %s (jordanGUID STRING, domain STRING, sfrom STRING, location_url STRING, request_datetime STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t'" %(tableName))
     print "1-----------"
-    client.execute("LOAD DATA LOCAL INPATH '/home/jordan_log/%s.log' OVERWRITE INTO TABLE %s" %(tableName,tableName)) 
+    # client.execute("LOAD DATA LOCAL INPATH '/home/jordan_log/%s.log' OVERWRITE INTO TABLE %s" %(tableName,tableName)) 
+    client.execute("LOAD DATA LOCAL INPATH '/home/jordan_logs/%s.log' INTO TABLE %s" %(tableName,tableName)) 
     print "2-----------"
     # client.execute("SELECT * FROM pokes")
     # while (1):
