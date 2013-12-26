@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+html{border:none; margin:0px; padding:0px;-webkit-text-size-adjust:none;}
+body{border:none; margin:0px; padding:0px; font:12px/1.5 "微软雅黑", Arial ; color:#404040; background:#fafafa;112px;-webkit-text-size-adjust:none;}
+div, span, label, cite, b, font, img, a, h1, h2, h3, h4, h5, h6, table, tbody, tr, td, th, form, p,dl,dt,dd,ul{border:none; margin:0px; padding:0px;  }
+table{ border-collapse: collapse;}
+a{text-decoration:none; color:#000;}
+.fl{ float:left!important;}
+.fr{ float:right!important;}
+.cl_z{clear:both; float:none;}
+.cl_z:after {clear: both;content: ".";display: block;height: 0;visibility: hidden;}
+em,cite{ font-style:normal;} 
+
+.MainHelp{width:1000px; margin:0 auto;}
+
+/* header */
+.header{ background:url(http://127.0.0.1/jordan/static/images/help2_headerbg.jpg) no-repeat;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/help2_headerbg.png');_ background: none; width:1000px; height:109px; position:relative; }
+.header .logo { width:400px; height:85px; position:absolute; left:20px; top:10px;}
+.header .logo .companyLogo{ background:url(http://127.0.0.1/jordan/static/images/help2_companyLogo.png) no-repeat;display:block; width:103px; height:75px;}
+.header .logo .usernameLogo{ background:url(http://127.0.0.1/jordan/static/images/help2_linebg.png) no-repeat;position:absolute; display:block; width:200px; height:81px; left:120px;}
+.header .logo .usernameLogo img{max-width:200px; max-height:75px; position:absolute; bottom:8px; margin-left:10px;}
+
+.header .phone span{ 
+    color:#e91b23; font-size:16px; font-weight:bold; background:url(http://127.0.0.1/jordan/static/images/help2_phonebg.png) no-repeat;height:40px; line-height:45px; display:block;padding-left:70px; margin-top:50px; position:absolute; left:400px;}
+.header .help a{ margin:65px 43px 0 0; font-size:14px; display:block; color:#ffffff;}
+
+
+/* footer */
+.footer{width:1000px; margin:0 auto; background:url(http://127.0.0.1/jordan/static/images/footer_03.jpg) repeat-x; height:44px; line-height:44px;}
+.footer .company{ margin-left:20px;}
+.footer .link{ margin-right:20px;}
+
+
+/* main */
+.main{width:637px; margin:10px  auto; }
+.formDiv{width:637px;background:url(http://127.0.0.1/jordan/static/images/help2_divbg_02.jpg) repeat-y; height:auto; padding:20px 0 10px 0;}
+.helpMain{background:url(http://127.0.0.1/jordan/static/images/help2_divBg_01.jpg) no-repeat 0 bottom; padding-bottom:10px;}
+.helpMain .helpForm{ margin:0px auto; width:430px;}
+.helpMain h2{background:url(http://127.0.0.1/jordan/static/images/help2_divBg_01.jpg) no-repeat 0 0; font-size: 14px;height: 40px;line-height: 40px;padding-left: 15px;}
+.helpMain span,.helpMain input,.helpMain em{ display:inline-block;}
+.helpMain p{ height:30px; line-height:30px; margin:5px 0;}
+.helpMain span{ width:90px; text-align:right;}
+.helpMain .inpT input{ height:25px; border:1px solid #ccc; line-height:25px;width:300px; background:#fff;}
+.helpMain .inpS input{background:url(http://127.0.0.1/jordan/static/images/help2_btn2_01.png) no-repeat; width:87px; height:30px; line-height:30px;border:0px; text-align:center; margin-left:200px;color:#fff; font-size:14px;}
+.helpMain .inpR input{ margin:8px 5px 0 9px;}
+.helpMain .textT{ padding:0 0 0 90px; color:#e50011;height:20px; line-height:20px;}
