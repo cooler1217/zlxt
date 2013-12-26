@@ -1,0 +1,39 @@
+sudo yum --nogpgcheck localinstall cloudera-cdh-4-0.i386.rpm
+sudo rpm --import http://archive.cloudera.com/cdh4/redhat/6/x86_64/cdh/RPM-GPG-KEY-cloudera
+sudo yum clean all; sudo yum install hadoop-0.20-mapreduce-jobtracker
+sudo yum clean all; sudo yum install hadoop-hdfs-namenode
+sudo yum clean all; sudo yum install hadoop-hdfs-secondarynamenode
+sudo yum clean all; sudo yum install hadoop-0.20-mapreduce-tasktracker hadoop-hdfs-datanode
+sudo yum clean all; sudo yum install hadoop-client
+
+sudo cp -r /etc/hadoop/conf.dist /etc/hadoop/conf.my_cluster
+sudo alternatives --verbose --install /etc/hadoop/conf hadoop-conf /etc/hadoop/conf.my_cluster 50
+sudo alternatives --set hadoop-conf /etc/hadoop/conf.my_cluster
+
+
+
+
+mkdir -p /home/1/dfs/nn /home/dfs/nn
+chmod 700 /home/1/dfs/nn /home/dfs/nn
+mkdir -p /home/1/dfs/dn /home/2/dfs/dn /home/3/dfs/dn /home/4/dfs/dn
+chown -R hdfs:hdfs /home/1/dfs/nn /home/dfs/nn /home/1/dfs/dn /home/2/dfs/dn /home/3/dfs/dn /home/4/dfs/dn
+
+mkdir -p /home/1/mapred/local /home/2/mapred/local /home/3/mapred/local /home/4/mapred/local
+chown -R mapred:hadoop /home/1/mapred/local /home/2/mapred/local /home/3/mapred/local /home/4/mapred/local
+
+mkdir -P /home/hadoop-hdfs
+chmod  777 /hadoop-hdfs
+
+hadoop fs -mkdir /tmp 
+hadoop fs -chmod -R 1777 /tmp
+
+hadoop fs -mkdir /tmp/mapred/system
+hadoop fs -chown mapred:hadoop /tmp/mapred/system
+
+hadoop fs -mkdir -p /var/lib/hadoop-hdfs/cache/mapred/mapred/staging
+hadoop fs -chmod 1777 /var/lib/hadoop-hdfs/cache/mapred/mapred/staging
+hadoop fs -chown -R mapred /var/lib/hadoop-hdfs/cache/mapred
+
+hadoop fs -mkdir       /user/hive/warehouse
+hadoop fs -chmod 700   /tmp
+hadoop fs -chmod 700   /user/hive/warehouse

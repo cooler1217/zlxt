@@ -1,0 +1,20 @@
+
+/** 左漂浮 object可有可无，用来做播放控制 **/
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="97" height="233"><param name="movie" value="http://49.4.129.122/jordan/uploads/source/1379223734_zuopiaofu.swf"><param name="quality" value="high"><embed src="http://49.4.129.122/jordan/uploads/source/1379223734_zuopiaofu.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="97" height="233"></embed></object><img src="http://49.4.129.122/jordan/static/images/close.gif" class="close_ad_cooler">
+
+/** 右漂浮 **/
+<embed src="http://49.4.129.122/jordan/uploads/source/1379223757_youpiaofu.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="97" height="233"></embed><img src="http://49.4.129.122/jordan/static/images/close.gif" class="close_ad_cooler">
+
+/** 右下角浮窗 **/
+<div id="_AdSame_DIV441" name="_AdSame_DIV441" style="position: fixed; z-index: 100000000; top: auto; left: auto; width: 300px; height: 300px; overflow: hidden; right: 0px; bottom: 0px; display: block;"><embed style="display:block;" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" src="http://49.4.129.122/jordan/static/images/youxiajiao.swf" id="VideoPlayer" name="VideoPlayer" allowscriptaccess="always" quality="high" width="300" height="300" swliveconnect="false" wmode="transparent"></div>
+
+/** 背投 **/
+<div style="margin-top:100px;weidth:800px;height:600px;"><embed src="http://49.4.129.122/jordan/uploads/source/1379223818_benteng.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash"  width="800px" height="400px"></embed></div>
+
+/** 擎天柱 **/
+
+<embed src="http://49.4.129.122/jordan/uploads/source/1379223707_qingtianzhu.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="130" height="600"></embed><img align="right" src="http://49.4.129.122/jordan/static/images/close.gif" class="close_ad_cooler">
+
+
+
+insert into ad_config (`domain`,`description`,`position`,`isfixed`,`left`,`top`,`width`,`height`,`content`,`config_datetime`) values (select `domain`,`description`,`position`,`isfixed`,`left`,`top`,`width`,`height`,`content`,`config_datetime` from ad_config where id>=24);
